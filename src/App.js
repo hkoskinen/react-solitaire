@@ -13,7 +13,7 @@ class App extends Component {
 
   generateDeck = () => {
     const ranks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
-    const suits = ['spades', 'clubs', 'hearts', 'diamonds'];
+    const suits = ['s', 'c', 'h', 'd'];
 
     let rankIndex = 0;
     let suitIndex = 0;
@@ -32,13 +32,10 @@ class App extends Component {
   }
 
   render() {
+    const { deck } = this.state;
     return (
       <div className="App">
-        <Card rank={8} suit="c" />
-        <Card rank={2} suit="d" />
-        <Card rank={1} suit="h" />
-        <Card rank={10} suit="s" />
-        deck size: {this.state.deck.length}
+        {deck.map(card => <Card key={card.id} {...card} />)}
       </div>
     );
   }
