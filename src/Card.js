@@ -1,29 +1,27 @@
 import React from 'react';
 import './Card.css';
 
-const Suit = ({suit}) => {
+const Pip = ({rank, suit}) => {
   suit = suit.toLowerCase(); // just in case
   switch (suit) {
     case 's':
-      return <span>&spades;</span>
+      return <span>{rank}<br/>&spades;</span>
     case 'c':
-      return <span>&clubs;</span>
+      return <span>{rank}<br/>&clubs;</span>
     case 'd':
-      return <span className="red">&diams;</span>
+      return <span className="red">{rank}<br/>&diams;</span>
     case 'h':
-      return <span className="red">&hearts;</span>
+      return <span className="red">{rank}<br/>&hearts;</span>
   }
-}
+};
 
 const Card = ({rank, suit}) => (
   <div className="card">
     <div className="pip-top">
-      {rank}
-      <Suit suit={suit} />
+      <Pip rank={rank} suit={suit} />
     </div>
     <div className="pip-bottom">
-      {rank}
-      <Suit suit={suit} />
+      <Pip rank={rank} suit={suit} />
     </div>
   </div>
 );
