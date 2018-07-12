@@ -13,7 +13,7 @@ class App extends Component {
 
   generateDeck = () => {
     const ranks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
-    const suits = ['s', 'c', 'h', 'd'];
+    const suits = ['s', 'h', 'c', 'd'];
 
     let rankIndex = 0;
     let suitIndex = 0;

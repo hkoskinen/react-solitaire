@@ -1,11 +1,12 @@
 .card {
   width: 145px;
   height: 200px;
-  border: 1px solid #555;
+  border: 1px solid #333;
   background: #fff;
   position: relative;
   border-radius: 0.3rem;
   display: inline-block;
+  margin: 0.3rem;
 }
 
 .pip-top {
