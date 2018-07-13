@@ -3,8 +3,7 @@ import Card from './Card';
 
 class App extends Component {
   state = {
-    deck: [],
-    title: 'solitaire',
+    deck: []
   }
 
   componentDidMount = () => {
@@ -28,7 +27,19 @@ class App extends Component {
         rankIndex++;
       }
     }
-    this.setState({deck})
+    this.setState({deck: this.shuffleDeck(deck)})
+  }
+
+  shuffleDeck = unshuffledDeck => {
+    // primitive way to shuffle the deck
+    const deck = unshuffledDeck;
+    for (let i = 0; i < deck.length; i++) {
+      const temp = deck[i];
+      const randIndex = Math.floor(Math.random() * deck.length);
+      deck[i] = deck[randIndex]
+      deck[randIndex] = temp;
+    }
+    return deck;
   }
 
   render() {
