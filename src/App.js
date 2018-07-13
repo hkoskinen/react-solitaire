@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import StatusBar from './StatusBar';
 
 class App extends Component {
   state = {
@@ -47,7 +48,8 @@ class App extends Component {
     return (
       <div className="App">
         {deck.map(card => <Card key={card.id} {...card} />)}
-      </div>
+        <StatusBar />
+        </div>
     );
   }
 }
