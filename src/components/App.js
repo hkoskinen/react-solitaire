@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Card from "./Card";
 
 class App extends Component {
   state = {
@@ -6,7 +7,12 @@ class App extends Component {
   };
   render() {
     const { deck } = this.state;
-    return <div>app {deck}</div>;
+    return (
+      <div>
+        app {deck}
+        <Card />
+      </div>
+    );
   }
 }
 
