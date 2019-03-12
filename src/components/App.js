@@ -1,9 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
-const App = props => (
-  <div>
-    <h1>App</h1>
-  </div>
-);
+class App extends Component {
+  state = {
+    deck: []
+  };
+  render() {
+    const { deck } = this.state;
+    return <div>app {deck}</div>;
+  }
+}
 
 export default App;
